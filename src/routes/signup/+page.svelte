@@ -1,7 +1,6 @@
 <script lang="ts">
 
   import { fly } from 'svelte/transition';
-  import gaming from '$lib/asset/gaming.png'
 
 </script>
 
@@ -74,7 +73,7 @@
             </div>
           </div>
           <div class="flex flex-row gap-1 items-center content-center">
-            <input name="terms" type="checkbox" required>
+            <input name="terms" id="terms" type="checkbox" required>
             <label for="terms" class="text-gray-700 text-sm">I agree to the <span class="text-emerald-700">Terms</span> and <span class="text-emerald-700">Conditions.</span></label>
           </div>
           <button
