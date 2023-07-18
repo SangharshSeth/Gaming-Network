@@ -2,7 +2,13 @@
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
-    extend: {}
+    extend: {},
+    fontFamily: {
+      'sans': ['Roboto', 'system-ui'],
+      'serif': ['ui-serif', 'Georgia'],
+      'mono': ['SFMono-Regular'],
+      'sans-serif': ['Lato']
+    }
   },
   plugins: []
 };

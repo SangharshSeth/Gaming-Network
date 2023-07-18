@@ -5,9 +5,9 @@ backdrop-blur-md shadow-sm w-full top-0 left-0 right-0 z-10 fixed"
   <!-- Logo Container -->
   <div class="flex items-center">
     <!-- Logo -->
-    <a href="/go" class="cursor-pointer">
+    <a href="/" class="cursor-pointer">
       <h3 class="text-2xl font-medium text-emerald-600">
-		Some Logo
+		Gamingstan
       </h3>
     </a>
   </div>
@@ -17,7 +17,7 @@ backdrop-blur-md shadow-sm w-full top-0 left-0 right-0 z-10 fixed"
     <a
       class="flex text-gray-600 hover:text-emerald-600
 		cursor-pointer transition-colors duration-300"
-      href="/home"
+      href="/"
     >
       Home
     </a>
