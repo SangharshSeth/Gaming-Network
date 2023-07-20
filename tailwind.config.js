@@ -7,8 +7,8 @@ export default {
       'sans': ['Roboto', 'system-ui'],
       'serif': ['ui-serif', 'Georgia'],
       'mono': ['SFMono-Regular'],
-      'sans-serif': ['Lato']
-    }
+      'sans-serif': ['Lato'],
+    },
   },
-  plugins: []
+  plugins: [],
 };

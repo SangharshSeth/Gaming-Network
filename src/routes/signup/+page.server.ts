@@ -1,5 +1,14 @@
 import { redirect } from "@sveltejs/kit";
 import type { Actions } from "./$types";
+
+export const load = async (event: any) => {
+
+    const sessionId = event.cookies.get("sessionId");
+    if (sessionId) {
+        throw redirect(301, "/profile");
+    }
+};
+
 export const actions: Actions = {
     signup: async ({request}) => {
         const formData = await request.formData();

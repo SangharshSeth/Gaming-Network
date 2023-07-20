@@ -1,12 +1,20 @@
 import { redirect } from "@sveltejs/kit";
 import type { Actions } from "./$types";
+
+export const load = async (event: any) => {
+
+    const sessionId = event.cookies.get("sessionId");
+    if (sessionId) {
+        throw redirect(301, "/profile");
+    }
+};
+
 export const actions: Actions = {
-    login: async ({request}) => {
+    default: async ({ request, cookies }) => {
         const formData = await request.formData();
         console.log(formData)
         const email = formData.get("email");
         const passcode = formData.get("password");
-        let platform = [];
         const response = await fetch("http://localhost:8080/auth/login", {
             body: JSON.stringify({
                 "email": email,
@@ -17,11 +25,19 @@ export const actions: Actions = {
                 "Content-Type": "application/json"
             }
         })
-        const result = await response.json();
-        const headers = await response.headers;
-        console.log(result)
-        console.log(headers)
-        throw redirect(301, '/')
+
+        if (response.ok) {
+            const sessionId = response.headers.get("Authorization");
+            cookies.set("sessionId", sessionId?.split("Bearer ")[1] ?? "", {
+                path: "/",
+            });
+
+            throw redirect(301, "/profile");
+        }
+
+        return {
+            error: await response.text(),
+        };
 
     }
 }
