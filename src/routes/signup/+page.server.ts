@@ -19,7 +19,7 @@ export const actions: Actions = {
         formData.get("pcgaming") === "on"? platform.push("pc"): "";
         formData.get("xbox") === "on"? platform.push("xbox"): "";
         formData.get("playstation") === "on"? platform.push("playstation"): "";
-        const response = await fetch("http://localhost:8080/auth/signup", {
+        const response = await fetch("https://gaming-network-backend.onrender.com/auth/signup", {
             body: JSON.stringify({
                 "email": email,
                 "password": passcode,

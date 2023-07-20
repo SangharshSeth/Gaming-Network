@@ -15,7 +15,7 @@ export const actions: Actions = {
         console.log(formData)
         const email = formData.get("email");
         const passcode = formData.get("password");
-        const response = await fetch("http://localhost:8080/auth/login", {
+        const response = await fetch("https://gaming-network-backend.onrender.com/auth/login", {
             body: JSON.stringify({
                 "email": email,
                 "password": passcode,
