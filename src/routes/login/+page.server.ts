@@ -16,11 +16,11 @@ export const actions: Actions = {
         const email = formData.get("email");
         const passcode = formData.get("password");
         const response = await fetch("https://gaming-network-backend.onrender.com/auth/login", {
+            method: "POST",
             body: JSON.stringify({
                 "email": email,
                 "password": passcode,
             }),
-            method: "POST",
             headers: {
                 "Content-Type": "application/json"
             }

@@ -13,7 +13,7 @@
 <div
   class="mt-8 sm: mx-auto sm: w-full sm: max-w-md h-full"
   style="margin-top: 160px;"
-  in:fly={{x: 50, duration: 1000}}
+  in:fly={{y: 50, duration: 1000}}
 >
   <div class=" bg-white py-8 px-6 shadow rounded-xl sm:px-10" style="height: 730px;">
     <div class="sm: mx-auto sm: w-full sm: max-w-md">
@@ -40,7 +40,7 @@
               name="email"
               placeholder="user@mail.com"
               required
-              type="text"
+              type="email"
             />
           </div>
           <div>
@@ -55,6 +55,7 @@
               placeholder="Password"
               required
               type="password"
+              minlength=20
             />
           </div>
           <div class="flex flex-col gap-1 text-sm font-medium text-gray-700">

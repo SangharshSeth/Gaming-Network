@@ -1,6 +1,5 @@
 <script lang="ts">
   import { fly } from "svelte/transition";
-  import gaming from "$lib/asset/gaming.png";
 </script>
 
 <title> Login </title>
@@ -60,7 +59,7 @@
             />
           </div>
           <div class="flex flex-row gap-1 items-center content-center">
-            <label for="terms" class="text-gray-700 text-sm font-medium"
+            <label for="terms" id="terms" class="text-gray-700 text-sm font-medium"
               >Forgot your Password? <a href="/forgot" class="text-emerald-700"
                 >Reset Here.</a
               ></label
