@@ -1,6 +1,6 @@
 <script lang="ts">
 
-  import { fly } from 'svelte/transition';
+  import  { fly }  from 'svelte/transition';
 
 </script>
 
@@ -11,11 +11,10 @@
 />
 
 <div
-  class="mt-8 sm: mx-auto sm: w-full sm: max-w-md h-full"
-  style="margin-top: 160px;"
+  class="mt-48 border rounded-md sm: mx-auto sm: w-full sm: max-w-md h-full"
   in:fly={{y: 50, duration: 1000}}
 >
-  <div class=" bg-white py-8 px-6 shadow rounded-xl sm:px-10" style="height: 730px;">
+  <div class=" bg-white py-8 px-6  rounded-xl sm:px-10">
     <div class="sm: mx-auto sm: w-full sm: max-w-md">
       <div
         class=" mb-6 flex flex-col items-center content-center gap-2"
@@ -34,8 +33,7 @@
               Email
             </label>
             <input
-              class="w-full border focus:outline-none focus:border-emerald-500
-                            border-gray-300 px-4 py-2 rounded shadow-sm"
+              class="w-full bg-[#f2f2f2] outline-none px-4 py-3 rounded shadow-sm"
               id="email"
               name="email"
               placeholder="user@mail.com"
@@ -48,8 +46,7 @@
               Password
             </label>
             <input
-              class="w-full border focus:outline-none focus:border-emerald-500
-                            border-gray-300 px-4 py-2 rounded shadow-sm"
+              class="w-full bg-[#f2f2f2] outline-none px-4 py-3 rounded shadow-sm"
               id="password"
               name="password"
               placeholder="Password"

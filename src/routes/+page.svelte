@@ -1,7 +1,6 @@
 <script lang="ts">
 
     import { fly } from "svelte/transition";
-    import { Add } from "$lib/utils/math";
 </script>
 
 <div class="flex  flex-row items-center content-center overflow-x-hidden  w-full rounded-sm" in:fly={{x: 100, duration: 500}}>

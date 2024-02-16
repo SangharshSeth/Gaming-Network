@@ -1,9 +1,15 @@
-<script>
-    import "../app.css";
-    import Header from "$lib/Header.svelte";
+<script lang="ts">
     import Footer from "$lib/Footer.svelte";
+    import Header from "$lib/Header.svelte";
+    import '@fontsource-variable/dm-sans'
+    import '@fontsource-variable/inter'
+    import "../app.css";
 </script>
 
-<Header />
-<slot />
-<Footer />
+<div class="flex flex-col min-h-screen">
+    <Header />
+    <main class="flex-1">
+        <slot />
+    </main>
+    <Footer />
+</div>
