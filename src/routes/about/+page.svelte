@@ -1,13 +1,14 @@
 <script (lang="ts")>
     export let data;
     import { Button } from "$lib/components/ui/button";
-    import { signIn, signOut } from "@auth/sveltekit/client";
+    import { SignIn, SignOut } from "@auth/sveltekit/components";
+
 </script>
 <div style="margin-top: 100px;">
 <p>About</p>
 
 <a href="/">Home</a>
-<Button variant="outline" class="w-full" on:click={() => signOut()}
+<Button variant="outline" class="w-full" on:click={() => SignOut()}
     >SignOut</Button
 >
 </div>
