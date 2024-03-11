@@ -47,7 +47,8 @@ const config = {
 				card: {
 					DEFAULT: "hsl(var(--card) / <alpha-value>)",
 					foreground: "hsl(var(--card-foreground) / <alpha-value>)"
-				}
+				},
+
 			},
 			borderRadius: {
 				lg: "var(--radius)",
@@ -55,7 +56,8 @@ const config = {
 				sm: "calc(var(--radius) - 4px)"
 			},
 			fontFamily: {
-				sans: [...fontFamily.sans]
+				sans: [...fontFamily.sans],
+				Poppins: ["Poppins", ...fontFamily.sans]
 			}
 		}
 	},

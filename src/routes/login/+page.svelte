@@ -2,10 +2,9 @@
     import { Button } from "$lib/components/ui/button";
     import { signIn, signOut } from "@auth/sveltekit/client";
     import { fly } from "svelte/transition";
-
+    import GithubLogo from 'svelte-radix/GithubLogo.svelte'
     import { page } from "$app/stores";
-    console.log($page.data.session, "Login Page")
-
+    console.log($page.data.session, "Login Page");
 </script>
 
 <title> Login </title>
@@ -15,8 +14,8 @@
 />
 
 <div
-    class=" mt-48 border rounded-md sm: mx-auto sm: w-full sm: max-w-md h-full"
-    in:fly={{ y: 50, duration: 1000 }}
+    class=" mt-24 border rounded-md sm: mx-auto sm: w-full sm: max-w-md h-full bg-white"
+    in:fly={{ x: 100, duration: 500 }}
 >
     <div class="py-6 px-6 shadow-inner rounded-xl sm:px-10">
         <div class="sm: mx-auto sm: w-full sm: max-w-md">
@@ -66,30 +65,28 @@
                             for="terms"
                             id="terms"
                             >Forgot your Password? <a
-                                class="text-emerald-700"
+                                class="text-md text-neutral-50 font-Poppins"
                                 href="/forgot">Reset Here.</a
                             ></label
                         >
                     </div>
-                    <button
-                        class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 px-4 mt-1 rounded"
+                    <Button
+                        class="text-md  inline-flex items-center justify-center h-12 px-6 font-Poppins  py-2   rounded"
                     >
                         Submit
-                    </button>
+                    </Button>
+                    <div class="flex items-center justify-center mt-2">
+                        <div class="border-b border-slate-950 w-1/3"></div>
+                        <div class="mx-4 text-slate-900">OR</div>
+                        <div class="border-b border-slate-950 w-1/3"></div>
+                    </div>
+
+                    <Button
+                        class="text-md  inline-flex items-center justify-center h-12 px-6 font-Poppins  py-2  mt-1 rounded"
+                        on:click={() => signIn("github")}> <GithubLogo class="mr-2 h-4 w-4" /> Login With Github</Button
+                    >
                 </div>
             </form>
-            <div
-                class="bg-white py-8 px-6 flex justify-between gap-4 w-full rounded-xl sm:px-10"
-            >
-                <Button
-                    class="w-full"
-                    variant="outline"
-                    on:click={() => signIn("github")}>Github</Button
-                >
-                <Button variant="outline" class="w-full" on:click={() => signOut()}
-                    >SignOut</Button
-                >
-            </div>
         </div>
     </div>
 </div>

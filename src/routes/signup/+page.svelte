@@ -12,7 +12,7 @@
 
 <div
   class="mt-48 border rounded-md sm: mx-auto sm: w-full sm: max-w-md h-full"
-  in:fly={{y: 50, duration: 1000}}
+  in:fly={{ y: 100, duration: 500 }}
 >
   <div class=" bg-white py-8 px-6  rounded-xl sm:px-10">
     <div class="sm: mx-auto sm: w-full sm: max-w-md">

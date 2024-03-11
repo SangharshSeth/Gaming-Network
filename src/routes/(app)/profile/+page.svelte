@@ -9,7 +9,7 @@
     $:user = data.session;
 </script>
 
-<div style="margin-top: 100px">
+<div style="margin-top: 100px;" class="mx-72">
     {#if user?.user?.name}
     <Card.Root class="w-[380px] flex flex-col justify-center items-center">
         <Card.Header>
